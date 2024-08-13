@@ -1,0 +1,60 @@
+{
+    "buddies": [
+      {
+        "id": 1,
+        "name": "Dick Grayson",
+        "profilePic": "https://i.pinimg.com/736x/4c/97/f9/4c97f9536de2762a5ce096d5a2b25567.jpg",
+        "questions": [
+          "What's your favorite mission?",
+          "Who inspires you the most?",
+          "How do you relax after a tough day?",
+          "What advice would you give to someone starting out?"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "The Boys",
+        "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
+        "questions": [
+          "What drives your hunger?",
+          "How do you choose your hosts?",
+          "What are your thoughts on Spider-Man?",
+          "What do you do for fun?"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "The Boys",
+        "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
+        "questions": [
+          "What drives your hunger?",
+          "How do you choose your hosts?",
+          "What are your thoughts on Spider-Man?",
+          "What do you do for fun?"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "The Boys",
+        "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
+        "questions": [
+          "What drives your hunger?",
+          "How do you choose your hosts?",
+          "What are your thoughts on Spider-Man?",
+          "What do you do for fun?"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "The Boys",
+        "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
+        "questions": [
+          "What drives your hunger?",
+          "How do you choose your hosts?",
+          "What are your thoughts on Spider-Man?",
+          "What do you do for fun?"
+        ]
+      }
+    ]
+  }
+  
