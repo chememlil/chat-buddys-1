@@ -4,11 +4,14 @@ ul {
   }
   
   li {
+    display: flex;
+    align-items: flex-start; 
     background-color: #f0f0f0;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
   }
+  
   
   h2 {
     color: #333;
@@ -42,3 +45,4 @@ ul {
     border: none;
     cursor: pointer;
   }
+  
