@@ -1,48 +1,86 @@
-ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    align-items: flex-start; 
-    background-color: #f0f0f0;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e0e0e0;
-  }
-  
-  form {
-    margin-top: 20px;
-  }
-  
-  input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
+.chat-conversation {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  background-color: #e5ddd5;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start; /* Default alignment */
+  margin-bottom: 10px;
+}
+
+.message.user {
+  justify-content: flex-end; /* Align user messages to the end */
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.chat-bubble.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.chat-bubble.buddy {
+  background-color: #ffffff;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.chat-bubble p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
