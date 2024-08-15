@@ -1,60 +1,62 @@
 {
-    "buddies": [
-      {
-        "id": 1,
-        "name": "Dick Grayson",
-        "profilePic": "https://i.pinimg.com/736x/4c/97/f9/4c97f9536de2762a5ce096d5a2b25567.jpg",
-        "questions": [
-          "What's your favorite mission?",
-          "Who inspires you the most?",
-          "How do you relax after a tough day?",
-          "What advice would you give to someone starting out?"
-        ]
-      },
-      {
-        "id": 2,
-        "name": "The Boys",
-        "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
-        "questions": [
-          "What drives your hunger?",
-          "How do you choose your hosts?",
-          "What are your thoughts on Spider-Man?",
-          "What do you do for fun?"
-        ]
-      },
-      {
-        "id": 3,
-        "name": "Smile",
-        "profilePic": "https://i.pinimg.com/736x/1d/9a/80/1d9a8075c5a0f577fa3afc4ea5fcbbf6.jpg",
-        "questions": [
-          "What drives your hunger?",
-          "How do you choose your hosts?",
-          "What are your thoughts on Spider-Man?",
-          "What do you do for fun?"
-        ]
-      },
-      {
-        "id": 4,
-        "name": "Snopp Dog MF",
-        "profilePic": "https://i.pinimg.com/564x/09/06/ff/0906ff864634c432ae0a05f3fe2e36af.jpg",
-        "questions": [
-          "What drives your hunger?",
-          "How do you choose your hosts?",
-          "What are your thoughts on Spider-Man?",
-          "What do you do for fun?"
-        ]
-      },
-      {
-        "id": 5,
-        "name": "Tachala",
-        "profilePic": "https://i.pinimg.com/736x/5e/f0/83/5ef083787e08622f1e36c1ee8ea3853d.jpg",
-        "questions": [
-          "What drives your hunger?",
-          "How do you choose your hosts?",
-          "What are your thoughts on Spider-Man?",
-          "What do you do for fun?"
-        ]
+  "buddies": [
+    {
+      "id": 1,
+      "name": "Dick Grayson",
+      "profilePic": "https://i.pinimg.com/736x/4c/97/f9/4c97f9536de2762a5ce096d5a2b25567.jpg",
+      "questions": [
+        "How do you stay informed about political changes?",
+        "What do you do when you're feeling overwhelmed?",
+        "Which scientific field excites you the most?",
+        "What piece of technology has had the biggest impact on your life?",
+        "How has your philosophy of life changed over time?",
+        "What's a movie or show that left a lasting impression on you?",
+        "Which sports do you enjoy playing or watching?",
+        "What's the most memorable place you've traveled to?",
+        "Is there a historical event that you find particularly fascinating?",
+        "Do you have a favorite dish that you like to cook or eat?"
+      ],
+      "topics": {
+        "political": "Let's talk about current events and political issues.",
+        "emotional": "How are you feeling today?",
+        "scientific": "What are your thoughts on the latest scientific discoveries?",
+        "technology": "What new tech are you excited about?",
+        "philosophy": "What do you think is the meaning of life?",
+        "entertainment": "Seen any good movies or shows lately?",
+        "sports": "Are you into any sports?",
+        "travel": "Where's the best place you've traveled to?",
+        "history": "Do you have a favorite historical figure?",
+        "food": "What's your favorite type of cuisine?"
       }
-    ]
-  }
-  
+    },
+    {
+      "id": 2,
+      "name": "The Boys",
+      "profilePic": "https://i.pinimg.com/736x/2c/51/68/2c5168fc7cea158a94132b79a696c4ca.jpg",
+      "questions": [
+        "What political issue do you think needs more attention?",
+        "How do you cope with intense emotions?",
+        "Is there a scientific breakthrough you're particularly interested in?",
+        "What's a piece of technology you can't live without?",
+        "Do you think people control their own destinies, or is everything predetermined?",
+        "What show or movie has captured your interest recently?",
+        "Which sport do you think is the most challenging?",
+        "What's a place you've always wanted to visit but haven't yet?",
+        "Which historical period would you like to experience firsthand?",
+        "What's a dish that reminds you of home?"
+      ],
+      "topics": {
+        "political": "The state of the world seems chaotic. What do you think?",
+        "emotional": "What's been on your mind lately?",
+        "scientific": "Do you follow any scientific advancements?",
+        "technology": "Got any favorite gadgets?",
+        "philosophy": "Do you believe in fate?",
+        "entertainment": "Caught up on the latest series?",
+        "sports": "Which sports do you follow?",
+        "travel": "What's your dream travel destination?",
+        "history": "Any favorite eras in history?",
+        "food": "What's your go-to comfort food?"
+      }
+    }
+  ]
+}

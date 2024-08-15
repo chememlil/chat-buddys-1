@@ -1,27 +1,38 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function ChatProfile() {
   const { id } = useParams();
-  const [profile, setProfile] = React.useState(null);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
-    fetch(`http://localhost:3000/buddies/${id}`)
-      .then(response => response.json())
-      .then(data => setProfile(data));
+    fetch(`/buddies/${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Handle the data if necessary
+      })
+      .catch(err => {
+        console.error("Fetch error:", err);
+      });
   }, [id]);
 
-  if (!profile) return <div>Loading...</div>;
+  const handleTopicClick = (topic) => {
+    navigate(`/conversation/${id}?topic=${topic}`);
+  };
 
   return (
     <div>
-      <h1>{profile.name}</h1>
-      <img src={profile.profilePic} alt={profile.name} />
+      <h1>Chat Profile</h1>
       <p>Choose a conversation topic:</p>
       <ul>
-        <li><Link to={`/conversation/${id}?topic=political`}>Political</Link></li>
-        <li><Link to={`/conversation/${id}?topic=emotional`}>Emotional</Link></li>
-        <li><Link to={`/conversation/${id}?topic=scientific`}>Scientific</Link></li>
+        <li><button onClick={() => handleTopicClick('political')}>Political</button></li>
+        <li><button onClick={() => handleTopicClick('emotional')}>Emotional</button></li>
+        <li><button onClick={() => handleTopicClick('scientific')}>Scientific</button></li>
       </ul>
     </div>
   );
