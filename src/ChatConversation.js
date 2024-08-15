@@ -31,54 +31,58 @@ function ChatConversation() {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  
-    const userMessage = input.trim();
-    if (!userMessage) return;
-  
-    const newMessage = { text: userMessage, sender: 'user' };
-  
-    if (needsExplanation) {
-      if (userMessage.toLowerCase() === 'no') {
-        const explanation = getExplanation(currentFact, topic);
-        setMessages([...messages, newMessage, { text: `No problem! Here's more information: ${explanation}`, sender: 'buddy' }]);
-        setNeedsExplanation(false);
-        setCurrentFact('');
-      } else if (userMessage.toLowerCase() === 'yes') {
-        setMessages([...messages, newMessage, { text: "That's nice! You're quite knowledgeable!", sender: 'buddy' }]);
-        setNeedsExplanation(false);
-        setCurrentFact('');
-      } else {
-        setMessages([...messages, newMessage, { text: "Got it! Feel free to ask for another fact.", sender: 'buddy' }]);
-        setNeedsExplanation(false);
-        setCurrentFact('');
-      }
-      setInput('');
-      return;
-    }
-  
-    const greetingResponse = getGreetingResponse(userMessage);
-    if (greetingResponse) {
-      setMessages([...messages, newMessage, { text: greetingResponse, sender: 'buddy' }]);
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const userMessage = input.trim();
+  if (!userMessage) return;
+
+  const newMessage = { text: userMessage, sender: 'user' };
+
+  if (needsExplanation) {
+    if (userMessage.toLowerCase() === 'no') {
+      const explanation = getExplanation(currentFact, topic);
+      setMessages([...messages, newMessage, { text: `No problem! Here's more information: ${explanation}`, sender: 'buddy' }]);
+      setNeedsExplanation(false);
+      setCurrentFact('');
+    } else if (userMessage.toLowerCase() === 'yes') {
+      setMessages([...messages, newMessage, { text: "That's nice! You're quite knowledgeable!", sender: 'buddy' }]);
+      setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, { text: `Do you want to know more about ${topic}?`, sender: 'buddy' }]);
+      }, 1000);
+      setNeedsExplanation(false);
+      setCurrentFact('');
     } else {
-      setMessages([...messages, newMessage]);
-  
-      const response = getAIResponse(userMessage, topic);
-      if (response) {
-        setMessages(prevMessages => [...prevMessages, { text: response, sender: 'buddy' }]);
-        setCurrentFact(response);  // Store the current fact for future explanation
-        setNeedsExplanation(true); // Flag for explanation
-      }
-  
-      if (questionIndex < questions.length) {
-        setMessages(prevMessages => [...prevMessages, { text: questions[questionIndex], sender: 'buddy' }]);
-        setQuestionIndex(questionIndex + 1);
-      }
+      setMessages([...messages, newMessage, { text: "Got it! Feel free to ask for another fact.", sender: 'buddy' }]);
+      setNeedsExplanation(false);
+      setCurrentFact('');
     }
-  
     setInput('');
-  };
+    return;
+  }
+
+  const greetingResponse = getGreetingResponse(userMessage);
+  if (greetingResponse) {
+    setMessages([...messages, newMessage, { text: greetingResponse, sender: 'buddy' }]);
+  } else {
+    setMessages([...messages, newMessage]);
+
+    const response = getAIResponse(userMessage, topic);
+    if (response) {
+      setMessages(prevMessages => [...prevMessages, { text: response, sender: 'buddy' }]);
+      setCurrentFact(response);
+      setNeedsExplanation(true);
+    }
+
+    if (questionIndex < questions.length) {
+      setMessages(prevMessages => [...prevMessages, { text: questions[questionIndex], sender: 'buddy' }]);
+      setQuestionIndex(questionIndex + 1);
+    }
+  }
+
+  setInput('');
+};
+
   
 
   const getAIResponse = (userInput, topic) => {
